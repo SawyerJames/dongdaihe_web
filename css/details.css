@@ -1,0 +1,101 @@
+body {
+    background: #EEEEEE;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+html{
+    background: #ffffff;
+}
+/*详情页*/
+.detail-head-title{
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+  overflow: auto;
+}
+.detail-head-content{
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  overflow: auto;
+}
+.detail-head-title>span{
+  float: left;
+  font-size: 14px;
+  padding-top: 0.5em;
+}
+.detail-head-title p{
+  float: right;
+  font-size: 18px;
+  line-height: 2em;
+  color: #FF9934;
+}
+.detail-head-le{
+  float: left;
+  width: 45%;
+  text-align: left;
+}
+.detail-head-le li{
+  margin-top: 0.5em;
+}
+.detail-head-le li span{
+  display: block;
+  float: left;
+  line-height: 20px;
+}
+.detail-head-le img{
+  display: block;
+  float: left;
+  width: 15px;
+  margin-left: 0.2em;
+}
+.detail-head-ri{
+  float: right;
+  width: 55%;
+  padding-top: 1.5em;
+}
+.shoppingCar{
+  float: right;
+  width: auto;
+  border: solid 1px #CBCBCB;
+  padding: 0.2em 0.6em;
+  margin-top:6px;
+  border-radius: 13px;
+}
+.purchase{
+  float: right;
+  width: auto;
+  background: #FF9833;
+  border: solid 1px #FF9833;
+  color: #fff;
+  padding: 0.2em 1.1em;
+  border-radius: 13px;
+  margin-top:6px;
+  margin-left: 0.3em;
+}
+.detail-service{
+  width: 100%;
+  padding-bottom: 5px;
+}
+.detail-service li{
+  display: inline-block;
+  margin: 0 1%;
+  line-height: 30px;
+}
+.detail-service img{
+  width: 15px;
+  margin-right: 0.3em;
+}
+.detail-ads li{
+  padding-top: 1em;
+  text-align: left;
+}
+.detail-ads li:first-child{
+  border-top:1px solid #EBEBEB;
+}
+.rule{
+  padding: 1em 0 2em 0;
+  text-align: left;
+}

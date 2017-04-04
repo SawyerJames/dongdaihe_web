@@ -1,9 +1,4 @@
-/**
- * @author: Caden
- * @Date: 11/6 0006 14:13
- */
-
-$(function () {
+;$(function () {
     $(".detail div").html($(".categories ul li:eq(0) a").html());
 
 

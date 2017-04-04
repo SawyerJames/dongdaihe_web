@@ -27,46 +27,7 @@ body {
 }
 
 
-/*首页*/
 /***********************  hot  *************************/
-.module {
-    background: #ffffff;
-    width: 100%;
-    margin-top: 10px;
-}
-
-.biao {
-    background: url(../images/common/arrow.png) no-repeat left center;
-    background-size: 7px 10px;
-    margin-left: 1em;
-    padding-left: 1em;
-    text-align: left;
-    overflow: auto;
-}
-
-.biao p {
-    float: left;
-    font-size: 14px;
-    line-height: 40px;
-}
-
-.biao span {
-    display: block;
-    float: right;
-    line-height: 40px;
-    margin-right: 1.5em;
-}
-
-.biao span a {
-    font-size: 12px;
-    color: #838383;
-}
-
-.cet {
-    width: 95%;
-    margin: 0 auto;
-    overflow: auto;
-}
 
 .rem {
     width: 44%;

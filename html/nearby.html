@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <title>附近房源</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" href="../css/common/reset.css">
+    <link rel="stylesheet" href="../css/common/headerSearch.css">
+    <link rel="stylesheet" href="../css/nearby.css">
+    <link rel="ShortCut Icon" href="../favicon.ico" />
+</head>
+
+<body>
+    <!-- ********************* header ********************** -->
+    <header class="header">
+        <div class="h_left">
+            <a href="#" class="return" style="background: url(../images/common/return.png) no-repeat;background-size:contain;"></a>
+        </div>
+        <div class="h_center">附近房源</div>
+        <div class="h_right"></div>
+    </header>
+    <div style="height:44px;"></div>
+    <!-- ********************* nav ********************** -->
+    <div class="nav">
+        <ul class="clearfix">
+            <li class="room">房型</li>
+            <li class="number">人数</li>
+            <li class="areas">小区</li>
+            <li class="screen">筛选</li>
+        </ul>
+    </div>
+    <div style="height:34px;"></div>
+    <!-- ********************* nav-content ********************** -->
+    <div class="nav-content">
+        <div class="room-content">
+            <form action="" method="get">
+                <div class="room-choose">
+                    <div>
+                        <span>一室一厅</span>
+                        <input type="checkbox" value="0">
+                    </div>
+                    <div>
+                        <span>一室一厅</span>
+                        <input type="checkbox" value="1">
+                    </div>
+                    <div>
+                        <span>一室一厅</span>
+                        <input type="checkbox" value="2">
+                    </div>
+                    <div>
+                        <span>一室一厅</span>
+                        <input type="checkbox" value="3">
+                    </div>
+                    <div>
+                        <span>一室一厅</span>
+                        <input type="checkbox" value="4">
+                    </div>
+                    <div>
+                        <span>一室一厅</span>
+                        <input type="checkbox" value="5">
+                    </div>
+                </div>
+                <div class="room-btn">
+                    <input type="button" value="重置" class="reset">
+                    <input type="submit" value="确定">
+                </div>
+            </form>
+        </div>
+        <div class="number-content">
+            <ul id="number-list">
+                <a href="#">
+                    <li>哈尔滨 <span class="ltIcon">1225&gt</span></li>
+                </a>
+                <a href="#">
+                    <li>全国 <span class="ltIcon">1225&gt</span></li>
+                </a>
+                <a href="#">
+                    <li>北京 <span class="ltIcon">1225&gt</span></li>
+                </a>
+                <a href="#">
+                    <li>天津 <span class="ltIcon">1225&gt</span></li>
+                </a>
+                <a href="#">
+                    <li>河北 <span class="ltIcon">1225&gt</span></li>
+                </a>
+                <a href="#">
+                    <li>山西 <span class="ltIcon">1225&gt</span></li>
+                </a>
+                <a href="#">
+                    <li>内蒙古 <span class="ltIcon">1225&gt</span></li>
+                </a>
+                <a href="#">
+                    <li>辽宁 <span class="ltIcon">1225&gt</span></li>
+                </a>
+                <a href="#">
+                    <li>吉林 <span class="ltIcon">1225&gt</span></li>
+                </a>
+                <a href="#">
+                    <li>黑龙江 <span class="ltIcon">1225&gt</span></li>
+                </a>
+                <a href="#">
+                    <li>上海 <span class="ltIcon">1225&gt</span></li>
+                </a>
+                <a href="#">
+                    <li>江苏 <span class="ltIcon">1225&gt</span></li>
+                </a>
+                <a href="#">
+                    <li>山东 <span class="ltIcon">1225&gt</span></li>
+                </a>
+                <a href="#">
+                    <li>河南 <span class="ltIcon">1225&gt</span></li>
+                </a>
+                <a href="#">
+                    <li>湖北 <span class="ltIcon">1225&gt</span></li>
+                </a>
+                <a href="#">
+                    <li>湖南 <span class="ltIcon">1225&gt</span></li>
+                </a>
+                <a href="#">
+                    <li>广东 <span class="ltIcon">1225&gt</span></li>
+                </a>
+                <a href="#">
+                    <li>广西 <span class="ltIcon">1225&gt</span></li>
+                </a>
+                <a href="#">
+                    <li>海南 <span class="ltIcon">1225&gt</span></li>
+                </a>
+            </ul>
+        </div>
+        <div class="areas-content">
+            <ul id="areas-list">
+                <a href="#">
+                    <li>智能排序</li>
+                </a>
+                <a href="#">
+                    <li>离我最近</li>
+                </a>
+                <a href="#">
+                    <li>好评优先</li>
+                </a>
+                <a href="#">
+                    <li>人气优先</li>
+                </a>
+                <a href="#">
+                    <li>价格最低</li>
+                </a>
+                <a href="#">
+                    <li>价格最高</li>
+                </a>
+            </ul>
+        </div>
+        <div class="screen-content">
+            <form action="" method="get">
+                <ul id="screen-list">
+                    <li class="list_bottom">
+                        <span>优惠买单</span>
+                        <span class="screen-btn">
+                            <span class="circle"></span>
+                        </span>
+                        <input type="checkbox" value="0">
+                    </li>
+                    <li class="list_bottom">
+                        <span>只看免预约</span>
+                        <span class="screen-btn">
+                        <span class="circle"></span>
+                        </span>
+                        <input type="checkbox" value="1">
+                    </li>
+                    <li class="list_bottom">
+                        <span>节假日可用</span>
+                        <span class="screen-btn">
+                        <span class="circle"></span>
+                        </span>
+                        <input type="checkbox" value="2">
+                    </li>
+                    <li>
+                        <span>酒店类型</span>
+                    </li>
+                    <li class="list_bottom">
+                        <div class="screen-choose">
+                            <div>
+                                <span>经济型酒店</span>
+                                <input type="radio" name="roomType" value="0">
+                            </div>
+                            <div>
+                                <span>快捷连锁</span>
+                                <input type="radio" name="roomType" value="1">
+                            </div>
+                            <div>
+                                <span>主题酒店</span>
+                                <input type="radio" name="roomType" value="2">
+                            </div>
+                            <div>
+                                <span>商务酒店</span>
+                                <input type="radio" name="roomType" value="3">
+                            </div>
+                            <div>
+                                <span>公寓</span>
+                                <input type="radio" name="roomType" value="4">
+                            </div>
+                            <div>
+                                <span>青年旅社</span>
+                                <input type="radio" name="roomType" value="5">
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <span>服务措施</span>
+                    </li>
+                    <li>
+                        <div class="screen-choose">
+                            <div>
+                                <span>停车场</span>
+                                <input type="radio" name="roomType" value="0">
+                            </div>
+                            <div>
+                                <span>吹风机</span>
+                                <input type="radio" name="roomType" value="1">
+                            </div>
+                            <div>
+                                <span>厨房</span>
+                                <input type="radio" name="roomType" value="2">
+                            </div>
+                            <div>
+                                <span>接送服务</span>
+                                <input type="radio" name="roomType" value="3">
+                            </div>
+                            <div>
+                                <span>洗衣机</span>
+                                <input type="radio" name="roomType" value="4">
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="screen-form-btn">
+                            <input type="button" value="重置" class="reset">
+                            <input type="submit" value="确定">
+                        </div>
+                    </li>
+                </ul>
+            </form>
+        </div>        
+    </div>
+    <div class="mask"></div>
+    <!-- ********************* content-list ********************** -->
+    <div class="room-list clearfix">
+        <div class="room-list-left">
+            <img src="../images/nearby/banner1.jpg" alt="" />
+        </div>
+        <div class="room-list-center">
+            <h3>东戴河温馨公寓</h3>
+            <ul>
+                <li>
+                    <p>一室一厅</p>
+                    <p>清新花园</p>
+                </li>
+                <li>
+                    <p>9.0分</p>
+                    <p>469条评论</p>
+                </li>
+            </ul>
+        </div>
+        <div class="room-list-right">
+            <div class="room-price">￥92</div>
+            <div class="room-collection clearfix">
+                <p>收藏</p>
+                <i>
+                   <img src="../images/common/search-star.png"/>
+                </i>
+            </div>
+        </div>
+    </div>
+    <div class="room-list clearfix">
+        <div class="room-list-left">
+            <img src="../images/nearby/banner1.jpg" alt="" />
+        </div>
+        <div class="room-list-center">
+            <h3>东戴河温馨公寓</h3>
+            <ul>
+                <li>
+                    <p>一室一厅</p>
+                    <p>清新花园</p>
+                </li>
+                <li>
+                    <p>9.0分</p>
+                    <p>469条评论</p>
+                </li>
+            </ul>
+        </div>
+        <div class="room-list-right">
+            <div class="room-price">￥92</div>
+            <div class="room-collection clearfix">
+                <p>收藏</p>
+                <i>
+                   <img src="../images/common/search-star.png"/>
+                </i>
+            </div>
+        </div>
+    </div>
+    <div class="room-list clearfix">
+        <div class="room-list-left">
+            <img src="../images/nearby/banner1.jpg" alt="" />
+        </div>
+        <div class="room-list-center">
+            <h3>东戴河温馨公寓</h3>
+            <ul>
+                <li>
+                    <p>一室一厅</p>
+                    <p>清新花园</p>
+                </li>
+                <li>
+                    <p>9.0分</p>
+                    <p>469条评论</p>
+                </li>
+            </ul>
+        </div>
+        <div class="room-list-right">
+            <div class="room-price">￥92</div>
+            <div class="room-collection clearfix">
+                <p>收藏</p>
+                <i>
+                   <img src="../images/common/search-star.png"/>
+                </i>
+            </div>
+        </div>
+    </div>
+    <div class="room-list clearfix">
+        <div class="room-list-left">
+            <img src="../images/nearby/banner1.jpg" alt="" />
+        </div>
+        <div class="room-list-center">
+            <h3>东戴河温馨公寓</h3>
+            <ul>
+                <li>
+                    <p>一室一厅</p>
+                    <p>清新花园</p>
+                </li>
+                <li>
+                    <p>9.0分</p>
+                    <p>469条评论</p>
+                </li>
+            </ul>
+        </div>
+        <div class="room-list-right">
+            <div class="room-price">￥92</div>
+            <div class="room-collection clearfix">
+                <p>收藏</p>
+                <i>
+                   <img src="../images/common/search-star.png"/>
+                </i>
+            </div>
+        </div>
+    </div>
+    <div class="room-list clearfix">
+        <div class="room-list-left">
+            <img src="../images/nearby/banner1.jpg" alt="" />
+        </div>
+        <div class="room-list-center">
+            <h3>东戴河温馨公寓</h3>
+            <ul>
+                <li>
+                    <p>一室一厅</p>
+                    <p>清新花园</p>
+                </li>
+                <li>
+                    <p>9.0分</p>
+                    <p>469条评论</p>
+                </li>
+            </ul>
+        </div>
+        <div class="room-list-right">
+            <div class="room-price">￥92</div>
+            <div class="room-collection clearfix">
+                <p>收藏</p>
+                <i>
+                   <img src="../images/common/search-star.png"/>
+                </i>
+            </div>
+        </div>
+    </div>
+    <div class="room-list clearfix">
+        <div class="room-list-left">
+            <img src="../images/nearby/banner1.jpg" alt="" />
+        </div>
+        <div class="room-list-center">
+            <h3>东戴河温馨公寓</h3>
+            <ul>
+                <li>
+                    <p>一室一厅</p>
+                    <p>清新花园</p>
+                </li>
+                <li>
+                    <p>9.0分</p>
+                    <p>469条评论</p>
+                </li>
+            </ul>
+        </div>
+        <div class="room-list-right">
+            <div class="room-price">￥92</div>
+            <div class="room-collection clearfix">
+                <p>收藏</p>
+                <i>
+                   <img src="../images/common/search-star.png"/>
+                </i>
+            </div>
+        </div>
+    </div>
+    <!-- ********************* script ********************** -->
+    <script src="../lib/jquery.min.js"></script>
+    <script src="../js/nearby.js"></script>
+</body>
+
+</html>
