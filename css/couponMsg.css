@@ -1,0 +1,35 @@
+body{
+	background: #ffffff;
+}
+.content{
+	width: 100%;
+	margin: 0 auto;
+	height: auto;
+	padding: 0; 
+	text-align: center;
+}
+ul{
+	width: 100%;
+	height: auto;
+}
+ul li{
+	width: 90%;
+	height: auto;
+	text-align: left;
+	padding: 5%;
+	font-size: 1em;
+	border-bottom: 1px solid #E4E4E4;
+}
+ul li:last-child{
+	border: none;
+}
+ul li p{
+	margin-bottom: 5px;
+	font-size: 1.2em;
+	text-align: justify;
+}
+ul li span{
+	color: #959595;
+	letter-spacing: 1px;
+	text-align: justify;
+}

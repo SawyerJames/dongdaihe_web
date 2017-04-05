@@ -1,0 +1,149 @@
+body {
+    background: #ffffff;
+}
+.footer{
+  width: 100%;
+  height: 52px;
+  background: #fff;
+  border-top: solid 1px #ABABAB;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 0;
+  margin: 0;
+  z-index:99;
+  text-align: right;
+}
+.footer p{
+    display: inline-block;
+    width: 60%;
+    height: 52px;
+    line-height: 52px;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #FF9934;
+}
+.footer a{
+    color: #FF9934;
+}
+.footer input{
+    width: 30%;
+    height: 52px;
+    border: none;
+    color: #ffffff;
+    font-size: 1.2em;
+    font-weight: bold;
+    background: #FF9934;
+}
+/*************** sub-list  *******************/
+.module{
+    margin: 0;
+}
+.br{
+    width: 100%;
+    height: 10px;
+    background: #E3E3E3;
+}
+.sub_list{
+    width: 100%;
+    height: auto;
+    text-align: left;
+}
+.sub_list ul li{
+    display: block;
+    width: 100%;
+    height: 35px;
+    border-bottom: solid 1px #D2D2D2;
+    position: relative;
+}
+.sub_list .goIn{
+    display: inline-block;
+    vertical-align: middle;
+    width: 32px;
+    height: 32px;
+    background: url(../images/common/goIn.png) no-repeat;
+    position: absolute;
+    right: 0;
+    bottom: 3px;
+}
+.sub_list ul li span{
+    display: inline-block;
+    width: 60px;
+    height: 35px;
+    line-height: 35px;
+    margin-left: 3%;
+    text-align: right;
+}
+.sub_list ul input{
+    width: 42%;
+    height: 25px;
+    margin-left: 5%;
+    border: none;
+    border-radius: 4px;
+    background: #F9F9F9;
+    outline: none;
+    font-size: 1em;
+    box-shadow: 1px 1px 1px #C5C5C5 inset;
+    padding-left: 3%;
+}
+/*************** room-list  *******************/
+
+.room-list {
+    width: 100%;
+    min-height: 80px;
+    padding: 0.5em 0em;
+    overflow: auto;
+}
+
+.room-list-left {
+    float: left;
+    width: 25%;
+    height: 80px;
+    margin: .5em;
+}
+
+.room-list-left img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.room-list-center {
+    font-size: 1em;
+    float: left;
+    width: 50%;
+    margin-top: 10px;
+}
+
+.room-list-center h3 {
+    width: 100%;
+    text-align: left;
+}
+
+.room-list-center li {
+    overflow: auto;
+    margin-top: 0.3em;
+}
+
+.room-list-center p {
+    color: #919191;
+    margin-right: .5em;
+    display: inline-block;
+}
+
+.room-list-center ul {
+    text-align: left;
+}
+
+.room-list-right {
+    float: left;
+    width: 20%;
+    text-align: left;
+}
+
+.room-price {
+    color: #FF9934;
+    margin-top: 15%;
+    font-size: 1.4em;
+}
