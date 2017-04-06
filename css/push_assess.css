@@ -92,58 +92,71 @@ body {
     margin-top: 15%;
     font-size: 1.4em;
 }
-
-
-/*************** last-list  *******************/
-
-.flex {
-    display: box;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
+textarea{
+    margin: 10px auto;
+    width: 86%;
+    height: 150px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 1px 4px #B3B3B3 inset;
+    box-shadow: 0px 1px 4px #B3B3B3 inset;
+    padding: 2%;
+}
+textarea:focus{
+    outline: none;
 }
 
-.userHead {
-    width: 80px;
-    text-align: center;
-}
-
-.userMsg {
-    -webkit-box-flex: 1;
-    -moz-box-flex: 1;
-    width: 20%;
-    -ms-flex: 1;
-    -webkit-flex: 1;
-    flex: 1;
+.imgContent{
+    width: 90%;
+    height: 60px;
     text-align: left;
-    color: #919191;
 }
-.userHead{
-    margin-top: 10px;
+input[type="file"]{
+    margin-left: 5%;
+    height: 60px;
+    width: 60px;
+    opacity: 0;
+    position: relative
 }
-.userMsg{
-    margin-top: 20px;
+.file{
+    margin-left: 5%;
+    height: 60px;
+    width: 60px;
+    background: url('../images/push_assess/add.png') no-repeat 0px 5px;  
+    position: absolute;
 }
-.userHead img {
-    width: 56px;
-    height: 56px;
-    border-radius: 28px;
+.left{
+    width: 95%;
+    height: 80px;
+    text-align: left;
+    padding-left: 5%;
 }
-.userMsg img {
-    width: 30%;
-    height: 50px;
-    margin: 0 1%;
+.left div span{
+    display: inline-block;
+    margin-right: 5px;
+    line-height: 40px;
 }
-.userMsg img:first-child{
-    margin-left:0; 
+.left div input[type='radio']{
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    margin: 0 2px;
+    position: relative;
+    opacity: 0;
 }
-div.flex{
-    justify-content: space-between;
-    margin:0 1% 10px 0;
+.left .star{
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    margin: 12px 0 0 2px;
+    background: url('../images/common/starN.png') no-repeat;
+    background-size: cover;
 }
-.userMsg p{
-    margin:0 1% 10px 0;
-    text-align: justify;
+input[type="submit"]{
+    width: auto;
+    height: 40px;
+    padding: 0 10px;
+    border: none;
+    background: #FF9934;
+    color: #ffffff;
+    float: right;
 }
