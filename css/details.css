@@ -69,11 +69,13 @@ html{
   width: auto;
   background: #FF9833;
   border: solid 1px #FF9833;
-  color: #fff;
   padding: 0.2em 1.1em;
   border-radius: 13px;
   margin-top:6px;
   margin-left: 0.3em;
+}
+.purchase a{
+  color: #fff;
 }
 .detail-service{
   width: 100%;

@@ -64,13 +64,16 @@ body {
 }
 
 .room-collection {
-    font-size: 12px;
     padding:0.2em 0 0 1em;
 }
-.delRoom{
-    display: block;
-    width: 25px;
-    height: 25px;
-    background: url('../images/collection/del.png') no-repeat;
-    background-size: cover;
+.room-collection a{
+    display: inline-block;
+    position: relative;
+    width: 30px;
+    height: 30px;
+}
+.room-collection img{
+    position: absolute;
+    top: -30px;
+    right: 0;
 }

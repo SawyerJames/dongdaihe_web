@@ -70,11 +70,12 @@ body {
 }
 /********************* 房型 ***************************/
 .room-choose,
+.number-choose,
 .screen-choose {
     width: 100%;
     height: auto;
 }
-
+.number-choose div,
 .room-choose div,
 .screen-choose div {
     display: inline-block;
@@ -83,7 +84,7 @@ body {
     height: 30px;
     margin: 10px auto 0;
 }
-
+.number-choose input[type='radio'],
 .room-choose input[type='checkbox'],
 .screen-choose input[type='radio'] {
     display: inline-block;
@@ -93,7 +94,7 @@ body {
     position: relative;
     opacity: 0;
 }
-
+.number-choose span,
 .room-choose span,
 .screen-choose span {
     display: inline-block;
@@ -107,7 +108,7 @@ body {
     border-radius: 2px;
     border: 1px solid #BBBBBB;
 }
-.roomActive,.screenActive{
+.Active{
     background: #15B4EE !important;
     color: #ffffff !important;
 }
@@ -152,14 +153,11 @@ input[type='button']:focus {
     outline: none;
 }
 /********************* 人数、小区 ***************************/
-.number-content ul,
 .areas-content ul {
     width: 100%;
     height: auto;
     margin: 0 auto;
 }
-
-.number-content ul a,
 .areas-content ul a {
     display: block;
     width: 92%;
@@ -169,20 +167,16 @@ input[type='button']:focus {
     padding-left: 8%;
     border-bottom: 1px solid #EBEBEB;
 }
-.number-content ul span {
-    padding-left: 5px;
-    color: #AFAFAF;
-}
 .liActive{
     background: #EBEBEB !important;
 }
+
 /********************* 筛选 ***************************/
 .screen-content ul {
     width: 100%;
     height: auto;
     margin: 0 auto;
 }
-
 .screen-content ul li {
     display: block;
     width: 92%;
@@ -246,7 +240,7 @@ input[type='button']:focus {
     margin: 0;
 }
 
-.screen-choose span {
+.number-choose span,.screen-choose span {
     width: 22%;
     height: 25px;
     line-height: 25px;
@@ -256,7 +250,10 @@ input[type='button']:focus {
     border: 1px solid #BBBBBB;
 }
 
-
+.screen-form-btn{
+    border: none;
+    margin: 0;
+}
 /*************** room-list  *******************/
 
 .room-list {

@@ -14,7 +14,7 @@ $(function() {
     var checkbox = room_content.find(':checkbox'),
         checkbox_screen = screen_content.find(':checkbox'),
         radio = screen_content.find(':radio'),
-        numberLi = number_content.find('a'),
+        numberRadio = number_content.find(':radio'),
         areasLi = areas_content.find('a'),
         resetBtn = $('.reset');
     var circle = $('.circle');
@@ -26,8 +26,8 @@ $(function() {
         toggle(screen, screen_content);
         check_list(checkbox);
         radio_list(radio);
+        radio_list(numberRadio);
         reset_btn();
-        li_btn(numberLi);
         li_btn(areasLi);
         circle_animate();
     }
@@ -35,9 +35,9 @@ $(function() {
     function toggle(clickDom, showDom) {
         clickDom.on('click', function() {
             nav_content.children('div').css({ 'display': 'none', "top": '0px' });
-            checkbox.prev().removeClass('roomActive');
-            radio.prev().removeClass('screenActive');
-            numberLi.removeClass('liActive');
+            checkbox.prev().removeClass('Active');
+            radio.prev().removeClass('Active');
+            numberRadio.removeClass('Active');
             areasLi.removeClass('liActive');
             circle.css('margin-left', '0px');
             showDom.css('display', 'block').animate({ 'top': '77px' }, 200);
@@ -51,14 +51,14 @@ $(function() {
     // function check_list
     function check_list(checkDom) {
         checkDom.on('click', function() {
-            $(this).prev().addClass('roomActive');
+            $(this).prev().addClass('Active');
         });
     }
     // function radio_list
     function radio_list(radioDom) {
         radioDom.on('click', function() {
-            radio.prev().removeClass('screenActive');
-            $(this).prev().addClass('screenActive');
+            radioDom.prev().removeClass('Active');
+            $(this).prev().addClass('Active');
         });
     }
     // function areas & number
@@ -71,11 +71,13 @@ $(function() {
     // function reset button
     function reset_btn() {
         resetBtn.on('click', function() {
-            checkbox.prev().removeClass('roomActive');
+            checkbox.prev().removeClass('Active');
             checkbox.attr('checked', false);
             checkbox_screen.attr('checked', false);
-            radio.prev().removeClass('screenActive');
+            radio.prev().removeClass('Active');
             radio.attr('checked', false);
+            numberRadio.prev().removeClass('Active');
+            numberRadio.attr('checked', false);
             circle.css('margin-left', '0px');
         });
     }

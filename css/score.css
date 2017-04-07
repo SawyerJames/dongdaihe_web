@@ -36,6 +36,26 @@ ul li a:not(.goIn){
 }
 ul li a.goIn{
 	width: 25%;
-	background: url('../images/common/goIn.png') no-repeat 100% 50%;
-	background-size: 30px 30px;
+	position: relative;
+}
+a.goIn img{
+	position: absolute;
+	right: 0;
+	top: 10px;
+}
+.scoreMsg{
+	height: auto;
+	display: none;
+}
+.scoreMsg p{
+	margin: 10px auto;
+	padding-right: 5%;
+	line-height: 1.5em;
+	text-align: justify;
+}
+.transform{
+	-webkit-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	transform: rotate(90deg);
 }

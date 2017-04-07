@@ -18,7 +18,7 @@
 <!-- **************************  header  ************************************ -->
     <header class="header">
         <div class="h_left">
-            <a href="#" class="return" style="background: url(../../images/common/return.png) no-repeat;background-size:contain;"></a>
+            <a href="#" onclick="javascript:window.history.go(-1);window.location.reload()" class="return" style="background: url(../../images/common/return.png) no-repeat;background-size:contain;"></a>
         </div>
         <div class="h_center">房型详情</div>
         <div class="h_right"></div>
@@ -58,8 +58,8 @@
                 </ul>
             </div>
             <div class="detail-head-ri">
-                <div class="purchase">立即购买</div>
-                <div class="shoppingCar">加入购物车</div>
+                <div class="purchase"><a href="../order_submit.html">立即购买</a></div>
+                <!-- <div class="shoppingCar">加入购物车</div> -->
             </div>
         </div>
     </div>
