@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../css/common/reset.css">
     <link rel="stylesheet" href="../css/common/headerSearch.css">
     <link rel="stylesheet" href="../css/fastFind.css">
+    <link rel="stylesheet" type="text/css" href="../css/common/Calendar.min.css" />
     <link rel="ShortCut Icon" href="../favicon.ico" />
 </head>
 
@@ -30,11 +31,15 @@
             <ul>
                 <li>
                     <span>入住时间</span>
-                    <a href="#" class="goIn"></a>
+                    <a href="#" class="goIn" id="time"><img src="../images/common/goIn.png" alt="展开"></a>
+                </li>
+                <li class="time-list">
+                    <input type="text" name="start_date" id="start_date" placeholder="选择入住日期" readonly="readonly" />
+                    <input type="text" name="end_date" id="end_date" placeholder="选择离店日期" readonly="readonly" />
                 </li>
                 <li>
                     <span>入住人数</span>
-                    <a href="#" class="goIn"></a>
+                    <a href="#" class="goIn" id="people"><img src="../images/common/goIn.png" alt="展开"></a>
                 </li>
                 <li class="people-list">
                     <div class="people-choose">
@@ -57,10 +62,64 @@
                     </div>
                 </li>
             </ul>
-            <input type="text" placeholder="输入关键词">
+            <input type="text" placeholder="输入关键词" id="keyWord">
             <input type="submit" value="开始查找 ">
         </form>
     </div>
+    <script src="../lib/jquery.min.js" type="text/javascript"></script>
+    <script src="../lib/Calendar.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function(){
+            //变量
+            var peopelList = $(".people-list"),
+                timeList = $('.time-list'),
+                peopleBtn = $("#people"),
+                timeBtn = $("#time"),
+                timeBtnImg = timeBtn.find("img"),
+                peopleBtnImg = peopleBtn.find("img");
+            var activeBtn = $('.people-choose').children('div').children('span'),
+                radio = $('.people-list').find('input:radio');
+            //点击三角按钮展开列表 函数
+            function showList (btnDom,btnImg,list) {
+                btnDom.on("click", function(){
+                    if (btnImg.hasClass('transform')) {
+                        btnImg.removeClass('transform');
+                        list.hide();               
+                    }else{
+                        btnImg.addClass('transform');
+                        list.show();
+                    }
+                })                
+            }
+            //点击选择人数按钮变色
+            radio.on('click', function() {
+                activeBtn.removeClass('peoActive');
+                $(this).prev().addClass('peoActive'); 
+            });
+            // API
+            function main () {
+                showList(peopleBtn,peopleBtnImg,peopelList);
+                showList(timeBtn,timeBtnImg,timeList);
+            }
+            main();
+        });
+    </script>
+    <script type="text/javascript">
+        var calendar = new LCalendar();
+        calendar.init({
+            'trigger': '#start_date', //标签id
+            'type': 'date', //date 调出日期选择 datetime 调出日期时间选择 time 调出时间选择 ym 调出年月选择,
+            'minDate': (new Date().getFullYear()-3) + '-' + 1 + '-' + 1, //最小日期
+            'maxDate': (new Date().getFullYear()+3) + '-' + 12 + '-' + 31 //最大日期
+        });
+        var calendar = new LCalendar();
+        calendar.init({
+            'trigger': '#end_date', //标签id
+            'type': 'date', //date 调出日期选择 datetime 调出日期时间选择 time 调出时间选择 ym 调出年月选择,
+            'minDate': (new Date().getFullYear()-3) + '-' + 1 + '-' + 1, //最小日期
+            'maxDate': (new Date().getFullYear()+3) + '-' + 12 + '-' + 31 //最大日期
+        });
+    </script>
 </body>
 
 </html>

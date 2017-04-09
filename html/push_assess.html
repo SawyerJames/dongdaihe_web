@@ -57,35 +57,109 @@
         </ul>
     </div>
     <form action="" method="post">
-    <div class="module">
-        <textarea name="assess" placeholder="请输入评价"></textarea>
-    </div>
-    <div class="module">
-        <div class="imgContent">
-            <span class="file"></span>
-            <input type="file">
+        <div class="module">
+            <textarea name="assess" placeholder="请输入评价"></textarea>
         </div>
-    </div>
-    <div class ="module left">
-        <div>
-            <span>入住环境：</span>
-            <span class="star"></span><input type="radio" name="roomStar" value="1">
-            <span class="star"></span><input type="radio" name="roomStar" value="2">
-            <span class="star"></span><input type="radio" name="roomStar" value="3">
-            <span class="star"></span><input type="radio" name="roomStar" value="4">
-            <span class="star"></span><input type="radio" name="roomStar" value="5">
+        <div class="module">
+            <div class="imgContent">
+                <span class="file"></span>
+                <input type="file">
+            </div>
         </div>
-        <div>
-            <span>服务态度：</span>
-            <span class="star"></span><input type="radio" name="serveStar" value="1">
-            <span class="star"></span><input type="radio" name="serveStar" value="2">
-            <span class="star"></span><input type="radio" name="serveStar" value="3">
-            <span class="star"></span><input type="radio" name="serveStar" value="4">
-            <span class="star"></span><input type="radio" name="serveStar" value="5">
-            <input type="submit" value="发表评价">
+        <div class="module left">
+            <div id="roomStar">
+                <span>入住环境：</span>
+                <span class="star"></span>
+                <input type="radio" name="roomStar" value="1">
+                <span class="star"></span>
+                <input type="radio" name="roomStar" value="2">
+                <span class="star"></span>
+                <input type="radio" name="roomStar" value="3">
+                <span class="star"></span>
+                <input type="radio" name="roomStar" value="4">
+                <span class="star"></span>
+                <input type="radio" name="roomStar" value="5">
+            </div>
+            <div id="serveStar">
+                <span>服务态度：</span>
+                <span class="star"></span>
+                <input type="radio" name="serveStar" value="1">
+                <span class="star"></span>
+                <input type="radio" name="serveStar" value="2">
+                <span class="star"></span>
+                <input type="radio" name="serveStar" value="3">
+                <span class="star"></span>
+                <input type="radio" name="serveStar" value="4">
+                <span class="star"></span>
+                <input type="radio" name="serveStar" value="5">
+                <input type="submit" value="发表评价">
+            </div>
         </div>
-    </div>
-</form>
+    </form>
+    <script src="../lib/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function(){
+            // variable
+            var roomStarBtn = $('input:radio[name="roomStar"]'),
+                serveStarBtn = $('input:radio[name="serveStar"]');
+            var RoomStarLength = $('#roomStar').find('.star').length,
+                RoomStar = $('#roomStar').find('.star'),
+                RoomStarBox = [];
+            var ServeStarLength = $('#serveStar').find('.star').length,
+                ServeStar = $('#serveStar').find('.star'),
+                ServeStarBox = [];
+            // 获取星星总个数放入数组 
+            for(i = 0;i<RoomStarLength;i++){
+                RoomStarBox.push(RoomStar[i]);
+            }
+            for(j = 0;j<RoomStarLength;j++){
+                ServeStarBox.push(ServeStar[j]);
+            }
+            // API 
+            function main () {
+                starShow(roomStarBtn,RoomStarBox);
+                starShow(serveStarBtn,ServeStarBox);
+            }
+            // starShow mixin
+            function starShow (btnDom,starBox) {
+                var par;
+                btnDom.on('click',function(par){
+                    //移除所有饱和星星
+                    for(i=0;i<5;i++){
+                        $(starBox[i]).removeClass('starL');
+                    }
+                    //获取当前input的val 
+                    par = $(this).val();
+                    //判断val值给星星加类
+                    if (par == 1) {
+                        $(starBox[0]).addClass('starL');
+                    }
+                    else if (par == 2) {
+                        for(i=0;i<2;i++){
+                            $(starBox[i]).addClass('starL');
+                        }
+                    }
+                    else if (par == 3) {
+                        for(i=0;i<3;i++){
+                            $(starBox[i]).addClass('starL');
+                        }
+                    }
+                    else if (par == 4) {
+                        for(i=0;i<4;i++){
+                            $(starBox[i]).addClass('starL');
+                        }
+                    }
+                    else if (par == 5) {
+                        for(i=0;i<5;i++){
+                            $(starBox[i]).addClass('starL');
+                        }
+                    }
+                })
+            }
+            // entry function
+            main();
+        })
+    </script>
 </body>
 
 </html>

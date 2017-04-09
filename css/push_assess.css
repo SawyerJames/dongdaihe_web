@@ -151,6 +151,10 @@ input[type="file"]{
     background: url('../images/common/starN.png') no-repeat;
     background-size: cover;
 }
+.left .starL{
+    background: url('../images/common/starL.png') no-repeat;
+    background-size: cover;
+}
 input[type="submit"]{
     width: auto;
     height: 40px;

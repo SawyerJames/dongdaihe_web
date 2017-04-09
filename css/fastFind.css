@@ -59,21 +59,32 @@ ul li span{
 }
 ul li a.goIn{
 	width: 25%;
-	background: url('../images/common/goIn.png') no-repeat 100% 50%;
-	background-size: 30px 30px;
+	position: relative;
+}
+a.goIn img{
+	position: absolute;
+	right: 0;
+	top: 10px;
+}
+.transform{
+	-webkit-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	transform: rotate(90deg);
 }
 .people-list{
 	height: auto;
 	padding: 0;
 	border:none;
 	display: none;
+	margin: 2% auto 0;
+	text-align: center;
 } 
 .people-choose{
-	width: 96%;
-	height: 50px;
+	width: 94%;
+	height: 30px;
 	padding: 2%;
-	margin-left: 2%;
-	text-align: center;
+	margin-left: 1%;
 }
 .people-choose>div{
 	display: inline-block;
@@ -99,4 +110,18 @@ ul li a.goIn{
 	color: #000000;
 	position: absolute;
 	z-index: -1;
+}
+.peoActive{
+	background: #14B3ED;
+	border: 1px solid #2F8CAE;
+	color: #ffffff !important;
+}
+.time-list{
+	display: none;
+	width: 90%;
+	height: auto;
+	padding-right: 5%;
+}
+#keyWord{
+	width: 80%;
 }

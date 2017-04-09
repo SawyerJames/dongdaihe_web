@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../css/common/reset.css">
     <link rel="stylesheet" href="../css/common/headerSearch.css">
     <link rel="stylesheet" href="../css/common/module.css">
+    <link rel="stylesheet" href="../css/common/Calendar.min.css" />
     <link rel="stylesheet" href="../css/order_submit.css">
     <link rel="ShortCut Icon" href="../favicon.ico" />
 </head>
@@ -47,19 +48,39 @@
             <div class="room-list-right">
                 <div class="room-price">￥198</div>
             </div>
-        </div>            
+        </div>
     </div>
     <div class="br"></div>
     <div class="sub_list">
         <ul>
             <li>
                 <span>入住日期</span>
-                <a href="#" class="goIn"></a>
+                <a href="javascript:void(0)" class="goIn">
+                    <img src="../images/common/goIn.png" alt="展开">
+                </a>
             </li>
-            <li><span>入住人</span><input type="text" name="user" placeholder="请输入入住人姓名"></li>
-            <li><span>联系电话</span><input type="text" name="user" placeholder="请输入入住人电话"></li>
-            <a href="#"><li><span>优惠券</span></li></a>
-            <a href="#"><li><span>积分</span></li></a>
+            <li class="time-list">
+                <input type="text" name="start_date" id="start_date" placeholder="选择入住日期" readonly="readonly" />
+                <input type="text" name="end_date" id="end_date" placeholder="选择离店日期" readonly="readonly" />
+            </li>
+            <li>
+                <span>入住人</span>
+                <input type="text" name="user" placeholder="请输入入住人姓名">
+            </li>
+            <li>
+                <span>联系电话</span>
+                <input type="text" name="user" placeholder="请输入入住人电话">
+            </li>
+            <a href="#">
+                <li>
+                    <span>优惠券</span>
+                </li>
+            </a>
+            <a href="#">
+                <li>
+                    <span>积分</span>
+                </li>
+            </a>
         </ul>
     </div>
 <!-- **************************  footer   ************************************ -->
@@ -67,6 +88,51 @@
         <p>共计：<a href="#">￥198</a></p>
         <input type="submit" name="submit" value="立即支付">
     </div>
+<!-- **************************  javascript   ************************************ -->
+    <script src="../lib/jquery.min.js" type="text/javascript"></script>
+    <script src="../lib/Calendar.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function(){
+            //变量
+            var timeList = $(".time-list"),
+                timeBtn = $('.goIn'),
+                timeImg = timeBtn.children('img');
+            //点击三角按钮展开列表 函数
+            function showList (btn,btnImg,list) {
+                btn.on("click", function(){
+                    if (btnImg.hasClass('transform')) {
+                        btnImg.removeClass('transform');
+                        list.hide();               
+                    }else{
+                        btnImg.addClass('transform');
+                        list.show();
+                    }
+                })                
+            }
+            // API
+            function main () {
+                showList(timeBtn,timeImg,timeList);
+            }
+            main();
+        });
+    </script>
+    <!-- -->
+    <script type="text/javascript">
+        var calendar = new LCalendar();
+        calendar.init({
+            'trigger': '#start_date', //标签id
+            'type': 'date', //date 调出日期选择 datetime 调出日期时间选择 time 调出时间选择 ym 调出年月选择,
+            'minDate': (new Date().getFullYear()-3) + '-' + 1 + '-' + 1, //最小日期
+            'maxDate': (new Date().getFullYear()+3) + '-' + 12 + '-' + 31 //最大日期
+        });
+        var calendar = new LCalendar();
+        calendar.init({
+            'trigger': '#end_date', //标签id
+            'type': 'date', //date 调出日期选择 datetime 调出日期时间选择 time 调出时间选择 ym 调出年月选择,
+            'minDate': (new Date().getFullYear()-3) + '-' + 1 + '-' + 1, //最小日期
+            'maxDate': (new Date().getFullYear()+3) + '-' + 12 + '-' + 31 //最大日期
+        });
+    </script>
 </body>
 
 </html>

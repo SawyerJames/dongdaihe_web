@@ -53,31 +53,32 @@ body {
 .sub_list ul li{
     display: block;
     width: 100%;
-    height: 35px;
+    height: 40px;
     border-bottom: solid 1px #D2D2D2;
     position: relative;
 }
 .sub_list .goIn{
-    display: inline-block;
-    vertical-align: middle;
-    width: 32px;
-    height: 32px;
-    background: url(../images/common/goIn.png) no-repeat;
+    width: 20%;
+    height: 40px;
     position: absolute;
     right: 0;
-    bottom: 3px;
+}
+a.goIn img{
+    position: absolute;
+    top: 3px;
+    right: 0;
 }
 .sub_list ul li span{
     display: inline-block;
     width: 60px;
-    height: 35px;
-    line-height: 35px;
+    height: 40px;
+    line-height: 40px;
     margin-left: 3%;
     text-align: right;
 }
 .sub_list ul input{
     width: 42%;
-    height: 25px;
+    height: 30px;
     margin-left: 5%;
     border: none;
     border-radius: 4px;
@@ -86,6 +87,24 @@ body {
     font-size: 1em;
     box-shadow: 1px 1px 1px #C5C5C5 inset;
     padding-left: 3%;
+}
+/*************** effect  *******************/
+.sub_list .time-list{
+    display: none;
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+.sub_list .time-list input{
+    margin: 10px auto;
+    width: 90%;
+    height: 30px;
+}
+.transform{
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
 }
 /*************** room-list  *******************/
 
