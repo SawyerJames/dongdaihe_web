@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>个人信息</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" href="../css/common/reset.css">
+    <link rel="stylesheet" href="../css/common/headerSearch.css">
+    <link rel="stylesheet" href="../css/userSetting.css">
+    <link rel="ShortCut Icon" href="../favicon.ico" />
+</head>
+<body>
+	<!-- ********************* header ********************** -->
+    <header class="header">
+        <div class="h_left">
+            <a href="my.html" class="return" style="background: url(../images/common/return.png) no-repeat;background-size:contain;"></a>
+        </div>
+        <div class="h_center">个人信息</div>
+        <div class="h_right"></div>
+    </header>
+    <div style="height:44px;"></div>
+    <!-- ********************* content ********************** -->
+     <div class="content">
+        <form action="" method="post">
+            <ul>
+                <li>
+                    <span>昵称</span>
+                    <a href="#" class="surface">中华小当家</a>
+                    <a href="#" class="goIn" id="userName"><img src="../images/common/goIn.png" alt="展开"></a>
+                </li>
+				<li class="userName-list">
+                	<input type="text" placeholder="请输入你的昵称">
+                </li>
+                <li>
+                    <span>性别</span>
+                   	<span class="sex">男</span><input type="radio" name="sex" value="0" checked="checked">
+                   	<span class="sex">女</span><input type="radio" name="sex" value="1">
+                </li>
+                <li>
+                    <span>年龄</span>
+                    <a href="#" class="surface">25</a>
+					<a href="#" class="goIn" id="age"><img src="../images/common/goIn.png" alt="展开"></a>
+                </li>
+                <li  class="age-list">
+                    <input type="number" placeholder="请输入你的年龄(只填写数字)">
+                </li>
+                <li>
+                    <span>职业</span>
+                     <a href="#" class="surface">挖掘机专家</a>
+                    <a href="#" class="goIn" id="profession"><img src="../images/common/goIn.png" alt="展开"></a>
+                </li>
+                <li class="profession-list">
+                	<input type="text" placeholder="请输入你的职业">
+                </li>
+            </ul>
+            <input type="submit" value="保存">
+        </form>
+    </div>
+    <script src="../lib/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function(){
+            //变量
+            var ageList = $(".age-list"),
+                proList = $('.profession-list'),
+                userList = $('.userName-list'),
+                ageBtn = $("#age"),
+                userBtn = $("#userName"),
+                proBtn = $("#profession"),
+                ageBtnImg = ageBtn.find("img"),
+                userBtnImg = userBtn.find("img"),
+                proBtnImg = proBtn.find("img");
+            var headImg = $('#headImg');
+            //点击三角按钮展开列表 函数
+            function showList (btnDom,btnImg,list) {
+                btnDom.on("click", function(){
+                    if (btnImg.hasClass('transform')) {
+                        btnImg.removeClass('transform');
+                        list.hide();               
+                    }else{
+                        btnImg.addClass('transform');
+                        list.show();
+                    }
+                })                
+            }
+            // 头像修改
+            function headImgMod () {
+                headImg.on('click',function () {
+
+                })
+            }
+            // API
+            function main () {
+                showList(ageBtn,ageBtnImg,ageList);
+                showList(proBtn,proBtnImg,proList);
+                showList(userBtn,userBtnImg,userList);
+                headImgMod();
+            }
+            main();
+        });
+    </script>
+</body>
+</html>

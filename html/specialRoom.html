@@ -25,99 +25,102 @@
     </header>
     <div style="height:44px;"></div>
     <!-- ********************* content-list ********************** -->
-    <a href="detail/detail_01.html">
-        <div class="room-list clearfix">
-            <div class="room-list-left">
-                <img src="../images/specialRoom/banner1.jpg" alt="" />
-            </div>
-            <div class="room-list-center">
-                <h3>东戴河温馨公寓</h3>
-                <ul>
-                    <li>
-                        <p>一室一厅</p>
-                        <p>清新花园</p>
-                    </li>
-                    <li>
-                        <p>9.0分</p>
-                        <p>469条评论</p>
-                    </li>
-                </ul>
-            </div>
-            <div class="room-list-right">
-                <div class="room-price">￥92</div>
-                <a href="#">
-                    <div class="room-collection clearfix">
-                        <p>收藏</p>
-                        <i>
-                           <img src="../images/common/search-star.png"/>
-                        </i>
-                    </div>
+    <div class="room-list clearfix">
+        <div class="room-list-left" onclick="location.href='detail/detail_01.html';">
+            <img src="../images/specialRoom/banner1.jpg" alt="" />
+        </div>
+        <div class="room-list-center" onclick="location.href='detail/detail_01.html';">
+            <h3>东戴河温馨公寓</h3>
+            <ul>
+                <li>
+                    <p>一室一厅</p>
+                    <p>清新花园</p>
+                </li>
+                <li>
+                    <p>9.0分</p>
+                    <p>469条评论</p>
+                </li>
+            </ul>
+        </div>
+        <div class="room-list-right">
+            <div class="room-price">￥92</div>
+            <div class="room-collection clearfix">
+                <a href="#" class="collection">
+                    <p>收藏</p>
+                    <span class="c_img"></span>
                 </a>
             </div>
         </div>
-    </a>
-    <a href="detail/detail_01.html">
-        <div class="room-list clearfix">
-            <div class="room-list-left">
-                <img src="../images/specialRoom/banner1.jpg" alt="" />
-            </div>
-            <div class="room-list-center">
-                <h3>东戴河温馨公寓</h3>
-                <ul>
-                    <li>
-                        <p>一室一厅</p>
-                        <p>清新花园</p>
-                    </li>
-                    <li>
-                        <p>9.0分</p>
-                        <p>469条评论</p>
-                    </li>
-                </ul>
-            </div>
-            <div class="room-list-right">
-                <div class="room-price">￥92</div>
-                <a href="#">
-                    <div class="room-collection clearfix">
-                        <p>收藏</p>
-                        <i>
-                           <img src="../images/common/search-star.png"/>
-                        </i>
-                    </div>
+    </div>
+    <div class="room-list clearfix">
+        <div class="room-list-left" onclick="location.href='detail/detail_01.html';">
+            <img src="../images/specialRoom/banner1.jpg" alt="" />
+        </div>
+        <div class="room-list-center" onclick="location.href='detail/detail_01.html';">
+            <h3>东戴河温馨公寓</h3>
+            <ul>
+                <li>
+                    <p>一室一厅</p>
+                    <p>清新花园</p>
+                </li>
+                <li>
+                    <p>9.0分</p>
+                    <p>469条评论</p>
+                </li>
+            </ul>
+        </div>
+        <div class="room-list-right">
+            <div class="room-price">￥92</div>
+            <div class="room-collection clearfix">
+                <a href="#" class="collection">
+                    <p>收藏</p>
+                    <span class="c_img"></span>
                 </a>
             </div>
         </div>
-    </a>
-    <a href="detail/detail_01.html">
-        <div class="room-list clearfix">
-            <div class="room-list-left">
-                <img src="../images/specialRoom/banner1.jpg" alt="" />
-            </div>
-            <div class="room-list-center">
-                <h3>东戴河温馨公寓</h3>
-                <ul>
-                    <li>
-                        <p>一室一厅</p>
-                        <p>清新花园</p>
-                    </li>
-                    <li>
-                        <p>9.0分</p>
-                        <p>469条评论</p>
-                    </li>
-                </ul>
-            </div>
-            <div class="room-list-right">
-                <div class="room-price">￥92</div>
-                <a href="#">
-                    <div class="room-collection clearfix">
-                        <p>收藏</p>
-                        <i>
-                           <img src="../images/common/search-star.png"/>
-                        </i>
-                    </div>
+    </div>
+    <div class="room-list clearfix">
+        <div class="room-list-left" onclick="location.href='detail/detail_01.html';">
+            <img src="../images/specialRoom/banner1.jpg" alt="" />
+        </div>
+        <div class="room-list-center" onclick="location.href='detail/detail_01.html';">
+            <h3>东戴河温馨公寓</h3>
+            <ul>
+                <li>
+                    <p>一室一厅</p>
+                    <p>清新花园</p>
+                </li>
+                <li>
+                    <p>9.0分</p>
+                    <p>469条评论</p>
+                </li>
+            </ul>
+        </div>
+        <div class="room-list-right">
+            <div class="room-price">￥92</div>
+            <div class="room-collection clearfix">
+                <a href="#" class="collection">
+                    <p>收藏</p>
+                    <span class="c_img"></span>
                 </a>
             </div>
         </div>
-    </a>
+    </div>
+    <script src="../lib/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function(){
+            var collectionBtn = $('.collection');
+            var img = $('.c_img');
+            img.on('click',function(){
+                $_self = $(this)
+                if ($_self.hasClass('cActive')) {
+                    $_self.removeClass('cActive');
+                }else{
+                    $_self.addClass('cActive');
+                }
+            })
+        });
+    </script>
 </body>
 
 </html>

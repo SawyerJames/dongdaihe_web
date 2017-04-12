@@ -164,3 +164,91 @@ input[type="submit"]{
     color: #ffffff;
     float: right;
 }
+/* *************************** add Img function*************************** */
+.z_photo {
+    width:100%;
+    height: 60px;
+    margin-left: 5%;
+    overflow: auto;
+    clear: both;
+}
+
+.z_photo img {
+    width: 1rem;
+    height: 60px;
+}
+
+.z_addImg {
+    float: left;
+    margin-right: 0.1rem;
+}
+
+.z_file {
+    width: 1rem;
+    height: auto;
+    background: url('../images/push_assess/add.png') no-repeat;
+    background-size: 100% 100%;
+    float: left;
+    margin-right: 0.2rem;
+}
+
+.z_file input::-webkit-file-upload-button {
+    width: 1rem;
+    height: auto;
+    border: none;
+    position: absolute;
+    outline: 0;
+    opacity: 0;
+}
+
+.z_file input#file {
+    display: block;
+    border: 0;
+    vertical-align: middle;
+}
+/*遮罩层*/
+.z_mask {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: none;
+}
+
+.z_alert {
+    width: 70%;
+    height: 15%;
+    border-radius: 3px;
+    background: #2B2B2B;
+    color: #000000;
+    font-size: 1.2em;
+    text-align: center;
+    position: absolute;
+    left: 15%;
+    top: 30%;
+}
+
+.z_alert p:nth-child(1) {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-align: center;
+    border-radius: 3px 3px 0 0;
+    background: #ffffff;
+}
+
+.z_alert p:nth-child(2) span {
+    display: inline-block;
+    width: 30%;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 2px;
+    color:  #ffffff;
+    margin: 6% 8% 0;
+    background: #666666;
+}

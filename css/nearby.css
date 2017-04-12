@@ -319,6 +319,9 @@ input[type='button']:focus {
 .room-collection {
     font-size: 12px;
     padding: 0em;
+    display: block;
+    width: auto;
+    height: auto;
 }
 
 .room-collection p {
@@ -326,13 +329,17 @@ input[type='button']:focus {
     color: #B5B5B5;
 }
 
-.room-collection i {
+.room-collection span {
+    display: inline-block;
     float: left;
-    display: block;
     margin-left: 0.6em;
     padding-top: 0.1em;
+    width: 16px;
+    height: 14px;
+    background: url('../images/common/starN.png') no-repeat;
+    background-size: cover;
 }
-
-.room-collection img {
-    width: 12px;
+.cActive{
+    background: url('../images/common/starL.png') no-repeat !important;
+    background-size: cover !important;    
 }

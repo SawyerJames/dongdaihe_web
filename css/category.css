@@ -70,7 +70,10 @@
     background: #fff;
     overflow: auto;
 }
-
+.deta li img{
+    width: 100%;
+    height: 120px;
+}
 .dea-biao {
     width: 100%;
 }
