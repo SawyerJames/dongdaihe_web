@@ -6,6 +6,4 @@ a img {border:0}
 body { color: #333; text-align: center; font: 12px "微软雅黑"; }
 ul, ol, li {list-style-type:none;vertical-align:0}
 a {outline-style:none;color:#333;text-decoration:none}
-a:hover { color: 333; text-decoration: none; background: rgba(0, 0, 0, 0);}
-a:active{background:none;}
 input,input:focus,input:active{user-select: text;}

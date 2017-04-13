@@ -71,24 +71,27 @@ body {
 }
 /*************** bottm-list  *******************/
 .o_btn1,.o_btn2{
+    width: 60px;
+    height: 24px;
+    line-height: 24px;
     font-size: 1.1em;
     padding: 2px;
     margin: 5px 5px 0;
     display: inline-block;
     text-align: center;
-    width: 60px;
-    height: 22px;
-    color: #959595;
-    line-height: 22px;
-    border: 1px solid #BDBDBD;
     border-radius: 4px;
 }
 .o_btn2{
-    height: 24px;
-    line-height: 24px;
     border: none;
     color: #ffffff;
     background: #FF9934;
+}
+.o_btn1{
+    color: #959595;
+    border: 1px solid #BDBDBD;
+}
+.o_btn2:active{
+    background: #F37F0C;
 }
 /*************** room-list  *******************/
 
@@ -162,7 +165,7 @@ body {
     display: none;
     position: fixed;
     width: 70%;
-    height: 15%;
+    height: auto;
     left: 15%;
     top: 35%;
     border-radius: 3px;
@@ -181,6 +184,10 @@ body {
     border-radius: 3px 3px 0 0;
     background: #ffffff;
 }
+.cancelContent{
+    width: 100%;
+    height: auto;
+}
 .cancelContent a{
     display: inline-block;
     width: 30%;
@@ -188,6 +195,9 @@ body {
     line-height: 30px;
     border-radius: 2px;
     color:  #ffffff;
-    margin: 6% 8% 0;
+    margin: 6% 8% 5%;
     background: #666666;
+}
+.cancelContent a:active{
+    background: #4B4B4B;
 }

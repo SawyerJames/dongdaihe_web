@@ -55,6 +55,7 @@ li input[type='text'],input[type='number']{
 	height: 30px;
 	padding-left: 2%;
 	border-radius: 3px;
+	border: 1px solid #ADADAD;
 }
 li input[type='text']:focus,li input[type='text']:active,input[type='submit']{
 	outline: none;

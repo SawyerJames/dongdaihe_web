@@ -1,7 +1,7 @@
 ;
 $(function() {
     // variable
-    var cancel = $('.o_btn1');
+    var cancel = $('#o_cancel');
     // 创建取消订单的模板并插入
     var temp = ('<div class="mask"></div>' +
         '<div class="cancelAlert">' +
