@@ -10,6 +10,7 @@
     <meta name="format-detection" content="telephone=no" />
     <link rel="stylesheet" href="../../css/common/reset.css" type="text/css">
     <link rel="stylesheet" href="../../css/common/footer.css" type="text/css">
+    <link rel="stylesheet" href="../../css/common/dropload.css" type="text/css">
     <link rel="stylesheet" href="../../css/common/module.css">
     <link rel="stylesheet" href="../../css/category.css">
     <link rel="ShortCut Icon" href="../../favicon.ico" />
@@ -31,24 +32,20 @@
         <aside class="categories">
             <ul>
                 <!-- calss current 来标注点选样式 -->
-                <li><a href="category-all.html" class="current">全部商品</a></li>
-                <li><a href="category-page1.html">景区票</a></li>
-                <li><a href="category-page2.html">周边游</a></li>
-                <li><a href="#">飞机票</a></li>
-                <li><a href="#">火车票</a></li>
-                <li><a href="#">美食</a></li>
-                <li><a href="#">休闲娱乐</a></li>
-                <li><a href="#">高端酒店</a></li>
-                <li><a href="#">KTV</a></li>
+                <li><a href="#" class="current">全部商品</a></li>
+                <li><a href="#">景区票</a></li>
+                <li><a href="#">周边游</a></li>
                 <div class="bom"></div>
             </ul>
         </aside>
 <!--******************************* category right nav  *********************************-->
         <aside class="detail">
             <div class="deta">
-                <ul>
+            <!-- 死数据，测试用，三个点击列表 -->
+                <!-- 第一个测试列表 -->
+                <ul class="cate_list ul_active">
                     <li>
-                        <a href="">
+                        <a href="#">
                             <img src="../../images/category/fen01.jpg" alt="" width="100%">
                             <span class="dea-biao">
                                 <p>秦皇岛北戴河老虎石景区</p>
@@ -57,7 +54,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="#">
                             <img src="../../images/category/fen01.jpg" alt="" width="100%">
                             <span class="dea-biao">
                                 <p>秦皇岛北戴河老虎石景区</p>
@@ -66,7 +63,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="#">
                             <img src="../../images/category/fen01.jpg" alt="" width="100%">
                             <span class="dea-biao">
                                 <p>秦皇岛北戴河老虎石景区</p>
@@ -75,7 +72,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="#">
                             <img src="../../images/category/fen01.jpg" alt="" width="100%">
                             <span class="dea-biao">
                                 <p>秦皇岛北戴河老虎石景区</p>
@@ -84,7 +81,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="#">
                             <img src="../../images/category/fen01.jpg" alt="" width="100%">
                             <span class="dea-biao">
                                 <p>秦皇岛北戴河老虎石景区</p>
@@ -93,43 +90,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="">
-                            <img src="../../images/category/fen01.jpg" alt="" width="100%">
-                            <span class="dea-biao">
-                                <p>秦皇岛北戴河老虎石景区</p>
-                                <span>￥96/人</span>
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <img src="../../images/category/fen01.jpg" alt="" width="100%">
-                            <span class="dea-biao">
-                                <p>秦皇岛北戴河老虎石景区</p>
-                                <span>￥96/人</span>
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <img src="../../images/category/fen01.jpg" alt="" width="100%">
-                            <span class="dea-biao">
-                                <p>秦皇岛北戴河老虎石景区</p>
-                                <span>￥96/人</span>
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <img src="../../images/category/fen01.jpg" alt="" width="100%">
-                            <span class="dea-biao">
-                                <p>秦皇岛北戴河老虎石景区</p>
-                                <span>￥96/人</span>
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
+                        <a href="#">
                             <img src="../../images/category/fen01.jpg" alt="" width="100%">
                             <span class="dea-biao">
                                 <p>秦皇岛北戴河老虎石景区</p>
@@ -138,7 +99,42 @@
                         </a>
                     </li>
                 </ul>
+                 <!-- 第二个测试列表 -->
+                <ul class="cate_list">
+                    <li>
+                        <a href="#">
+                            <img src="../../images/category/fen01.jpg" alt="" width="100%">
+                            <span class="dea-biao">
+                                <p>秦皇岛北戴河老虎石景区</p>
+                                <span>￥96/人</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../../images/category/fen01.jpg" alt="" width="100%">
+                            <span class="dea-biao">
+                                <p>秦皇岛北戴河老虎石景区</p>
+                                <span>￥96/人</span>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+                 <!-- 第三个测试列表 -->
+                <ul class="cate_list">
+                    <li>
+                        <a href="#">
+                            <img src="../../images/category/fen01.jpg" alt="" width="100%">
+                            <span class="dea-biao">
+                                <p>秦皇岛北戴河老虎石景区</p>
+                                <span>￥96/人</span>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+                <!-- 底层封装，用来顶起页脚的布局 -->
                 <div class="bom"></div>
+                <!-- 底层封装结束 -->
             </div>
         </aside>
     </div>
@@ -179,6 +175,83 @@
             </li>
         </ul>
     </div>
+    <script type="text/javascript" src="../../lib/jquery.min.js"></script>
+    <script type="text/javascript" src="../../lib/dropload.min.js"></script>
+    <script type="text/javascript">
+    // tab切换信息
+    $(function(){
+        var L_ul = $('.categories').children('ul');
+        var L_a = L_ul.find('li').find('a');
+        $('.categories ul li').click(function () {
+            // 获取到当前点击的索引
+            var index = $(this).index();
+            L_a.removeClass('current');
+            $(this).find('a').addClass('current');
+            // 获取到的索引值在列表中被赋值
+            $('.cate_list').eq(index).addClass('ul_active').siblings('.cate_list').removeClass('ul_active');
+        });
+    });
+    // 上拉自动加载
+    $(function(){
+        var counter = 0;
+        // 每页展示6个
+        var num = 6;
+        var pageStart = 0,pageEnd = 0;
+
+        // dropload
+        $('.date').dropload({
+            scrollArea : window,
+            loadDownFn : function(me){
+                $.ajax({
+                    type: 'GET',
+                    url: '', //url接口由后台提供
+                    dataType: 'json',
+                    success: function(data){
+                        // 定义一个空字符串
+                        var result = '';
+                        // 页数计数
+                        counter++;
+                        pageEnd = num * counter;
+                        pageStart = pageEnd - num;
+                        // 页面上做出要展示的模板个数
+                        for(var i = pageStart; i < pageEnd; i++){
+                            // 插入的单个列表模块
+                            result += '<li>'+
+                                            '<a href="'+data.lists[i].link+'">'+
+                                                '<img src="'+data.lists[i].pic+'">'+
+                                                '<span class="dea-biao">'+
+                                                    '<p>'+data.lists[i].title+'<</p>'+
+                                                    '<span>'+data.lists[i].price+'</span>'+
+                                                '</span>'+
+                                            '</a>'+
+                                        '</li>';                             
+                            if((i + 1) >= data.lists.length){
+                                // 锁定
+                                me.lock();
+                                // 无数据
+                                me.noData();
+                                break;
+                            }
+                        }
+                        // 为了测试，延迟1秒加载
+                        setTimeout(function(){
+                            // 将模板追加在当前活动的列表
+                            $('.ul_active').append(result);
+                            // 每次数据加载完，必须重置
+                            me.resetload();
+                        },1000);
+                    },
+                    error: function(xhr, type){
+                        alert('数据加载失败！请重新刷新页面');
+                        // 即使加载出错，也得重置
+                        me.resetload();
+                    }
+                });
+            }
+        });
+    });
+    </script>
 </body>
 
 </html>
+  

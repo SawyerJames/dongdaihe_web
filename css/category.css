@@ -21,7 +21,12 @@
     z-index: 99;
     background-color: #fff;
 }
-
+.cate_list{
+    display: none;
+}
+.ul_active{
+    display: block;
+}
 .categories ul li {
     height: 46px;
     width: 100%;
@@ -39,12 +44,6 @@
     width: 88%;
     margin-left: 22%;
     flex-grow: 1;
-}
-
-.current {
-    background: #EFEDEE;
-    color: #FE992C;
-    font-weight: 700;
 }
 
 .current {

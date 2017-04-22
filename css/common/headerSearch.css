@@ -97,3 +97,9 @@
     width: 26px;
     height: 22px;
 }
+.logo{
+    display: inline-block;
+    width: 40px;
+    height: 40px !important;
+    vertical-align: middle;
+}
